@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* 공통 */
+* {margin:0; padding:0; box-sizing:border-box;}
+li {list-style:none;}
+body {font-size:14px; color:#333; background:#fff;}
+a {text-decoration:none; color:#333;}
+img {width:100%;}
+
+/* 레이아웃 */
+#wrap {width:1000px;}
+#header {float:left; width:200px; height:650px; background:#ffc0cb;}
+#slide {float:right; width:800px; height:350px;}
+#content {float:left; width:800px; height:200px; padding-top:30px;}
+#footer {float:right; width:800px; height:100px; background:#cccccc;}
+
+/* A영역 */
+#header .logo {height:40px; padding:20px 0; box-sizing:content-box;}
+#header .logo span {display:block; width:150px; height:15px; margin-left:25px; border-bottom:1px dotted #fff;}
+#nav {position:relative; top:30px; transition:0.4s; background:rgba(0, 199, 60, 0.7); z-index:1;}
+.main {position:absolute; top:0px; left:25px; text-align:center;}
+.main > li {width:150px; font-size:1.2em; font-weight:bold;}
+.main li a {display:block; padding:7px 0;}
+.main li a:hover {background:#737373; color:#fff;}
+.sub {display:none; background:#ccc;}
+.sub li {font-size:0.8em; font-weight:normal;}
+
+/* B영역 */
+#slide ul {position:relative; height:100%; overflow:hidden;}
+#slide li {position:absolute; width:100%; height:100%; left:0; top:0;}
+#slide li a {display:block; width:100%; height:100%; background:no-repeat 50% 50%/cover;}
+#slide li:nth-of-type(1) a {background-image:url('../images/slide1.jpg');}
+#slide li:nth-of-type(2) a {background-image:url('../images/slide2.jpg');}
+#slide li:nth-of-type(3) a {background-image:url('../images/slide3.jpg');}
+
+/* C영역 */
+#modal {display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
+.popup {position:fixed; left:50%; top:50%; width:600px; height:350px; margin:-175px 0 0 -300px; background:#fff; border:1px solid #333; padding:20px;}
+.popup p {padding:20px 0; line-height:2em;}
+.popup button {position:absolute; right:20px; bottom:20px; padding:5px 15px;}
+
+#content > div {float:left;}
+#content h2 {width:110px; margin-bottom:10px; background:#00C73C; text-align:center; padding:3px;}
+.notice {width:280px; padding-left:15px;}
+.notice a {display:inline-block; width:185px; padding-bottom:5px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; vertical-align:middle;}
+.notice a:hover {text-decoration:underline;}
+.gallery {width:280px;}
+.gallery a {display:inline-block; width:85px;}
+.quick {width:240px; text-align:right;}
+
+/* D영역 */
+.copy {float:left; width:560px; padding-left:20px;}
+.sf {float:right; padding-right:40px;}
+.copy p {padding-top:15px;}
+.sf a {transition:0.3s;}
+.sns, .familySite {width:160px; height:50px;}
+.sns {padding-top:10px;}
+.sns li {display:inline-block; padding-right:10px;}
+.sns li a {display:inline-block; width:40px; height:40px; vertical-align: middle;}
+.sns li:nth-of-type(1) a {background:url("../images/facebook_bk.png");}
+.sns li:nth-of-type(2) a {background:url("../images/youtube_bk.png");}
+.sns li:nth-of-type(3) a {background:url("../images/twitter_bk.png");}
+.sns li:nth-of-type(1) a:hover {background:url("../images/facebook.png");}
+.sns li:nth-of-type(2) a:hover {background:url("../images/youtube.png");}
+.sns li:nth-of-type(3) a:hover {background:url("../images/twitter.png");}
+
+.familySite {position:relative; z-index:1; height:30px; text-align:center; padding-top:10px;}
+.familySite p {padding:5px 10px; border:1px solid #333; background:#fff;}
+.familySite p:hover ~ ul {height:90px;}
+.familySite ul {border:1px solid #333; border-bottom:none; border-top:none; height:0; overflow:hidden; transition:.3s; background:#fff;}
+.familySite ul:hover {height:90px;}
+.familySite li {height:30px; line-height:30px; border-bottom:1px solid #333;}
+.familySite li a:hover {color:#111; font-weight:bold;}
+
+

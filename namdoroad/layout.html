@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        /* reset */
+        * {margin:0; padding:0;}
+        img {vertical-align:top;}
+
+        /* layout */
+        #wrap {width:1000px;}
+        #header {float:left; width:200px;}
+        #container {float:left; width:800px;}
+        #slide {height:350px;}
+        #contents {height:200px;}
+        #footer {height:100px;}
+
+        /* header */
+        .logo {height:40px; background:lightseagreen;}
+        .nav {height:610px; background:lightskyblue;}
+
+        /* slide */
+
+        /* contents */
+        .notice {float:left; width:320px; height:200px; background:lightpink;}
+        .gallery {float:left; width:280px; height:200px; background:lightsalmon;}
+        .quick {float:left; width:200px; height:200px; background:lightgoldenrodyellow;}
+
+        /* footer */
+        .copyright {float:left; width:650px; height:100px; background:lightgray;}
+        .sns {float:right; width:150px; height:50px; background:lightgreen;}
+        .familySite {float:right; width:150px; height:50px; background:lightcyan;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <!-- header -->
+        <div id="header">
+            <h1 class="logo">로고</h1>
+            <div class="nav">내비게이션</div>
+        </div> <!-- //#header -->
+
+        <div id="container">
+
+            <!-- slide -->
+            <div id="slide">
+                <img src="http://placehold.it/800x350" alt="슬라이드 이미지1">
+            </div> <!-- //#slide -->
+
+            <!-- contents -->
+            <div id="contents">
+                <div class="notice">공지사항</div>
+                <div class="gallery">겔러리</div>
+                <div class="quick">바로가기</div>
+            </div> <!-- //#contents -->
+
+            <!-- footer -->
+            <div id="footer">
+                <div class="copyright">저작권</div>
+                <div class="sns">SNS</div>
+                <div class="familySite">패밀리사이트</div>
+            </div> <!-- //#footer -->
+        </div>
+    </div>
+</body>
+</html>

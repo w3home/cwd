@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* 공통 */
+* {margin:0; padding:0; box-sizing:border-box;}
+li {list-style:none;}
+a {text-decoration:none; color:#333;}
+body {font-size:14px; background:#fff; color:#333;}
+.clearfix::after {content:""; clear:both; display:table;}
+
+/* 레이아웃 */
+#wrap {width:1200px; margin:0 auto;}
+header {height:100px; position:relative; padding-top:15px;}
+#slide {height:300px;}
+#content {height:200px; padding-top:10px;}
+footer {height:100px; background:#30a3f3;}
+
+/* A 영역 */
+.logo {width:260px; text-align:center;}
+nav {position:absolute; top:35px; right:30px; z-index:1; text-align:center;}
+.main > li {float:left; width:150px;}
+.main > li a {display:block; color:#fff; }
+.main > li > a {font-size:1.2em; font-weight:bold; padding:5px; background:#0066ad;}
+.main > li a:hover {background:#30a3f3;}
+
+.sub {display:none;}
+.sub li {background:rgba(0, 102, 173, 0.5); padding:5px 0;}
+.sub li:first-child {padding-top:10px;}
+.sub li:last-child {padding-bottom:20px;}
+
+/* B 영역 */
+#slide ul {position:relative; height:300px; overflow:hidden;}
+#slide li {position:absolute; left:0; top:0;}
+
+/* C 영역 */
+#modal {display:none; position:fixed; width:100%; height:100%; z-index:3;}
+.popup {position:fixed; left:50%; top:50%; width:600px; height:350px; margin:-175px 0 0 -300px; background:#fff; border:1px solid #333; padding:20px;}
+.popup p {margin:20px 0; line-height:2em;}
+.popup button {cursor:pointer; position:absolute; right:20px; bottom:20px; padding:5px 10px;}
+
+#content > div {float:left;}
+.tab {width:420px;}
+.tabBtn {font-size:1.1em;}
+.tabBtn li {float:left; padding:10px 20px; background:#0066ad; cursor:pointer; color:#fff;}
+.tabCont {position:absolute;}
+.notice {margin-top:10px;}
+.notice li {padding:3px 0;}
+.notice a {display:inline-block; width:340px;}
+.notice a:hover {text-decoration:underline;}
+.gallery {display:none; padding:15px 32px;}
+.gallery a:nth-of-type(1) {margin-right:10px;}
+.gallery a:nth-of-type(2) {margin-right:10px;}
+
+.banner, .quick {width:390px; text-align:right;}
+
+/* D 영역 */
+footer > div {float:left; padding:15px;}
+.logo2 {width:260px; text-align:center;}
+.copyright {width:940px; text-align:center; padding-top:30px;}
+.copyright li {display:inline-block;}
+.copyright a {transition:.3s;}
+.copyright a:hover {color:#fff;}
+.copyright p {padding-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+

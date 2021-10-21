@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <style>
+        /* reset */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        * {margin:0; padding:0;}
+        ul {list-style:none;}
+        a {text-decoration:none; color:#333;}
+        body {font:14px/1.6 'Noto Sans KR', sans-serif;}
+
+        /* navigation */
+        #nav {position:absolute; top:100px;}
+        /* 1depth: main */
+        .main {
+            width:150px; background:yellow; 
+            text-align:center; font-size:16px; font-weight:500;
+        }
+        .main > li {
+            position:relative;
+            background:#333;
+        }
+        .main > li > a {
+            display:block; width:100%; padding:5px 0;
+            border-bottom:1px solid #ccc;
+        }
+        .main > li:hover .sub {display:block;}
+        .main > li:hover > a {background:#ccc; color:#333;}
+        .main > li > a {color:#fff;}
+
+        /* 2depth: sub */
+        .sub {
+            display:none;
+            position:absolute; left:150px; top:-30px;
+            width:130px; background:#555;
+            padding:5px 0 80px;
+        }
+        .sub a {display:block; width:100%; color:#ccc; font-size:14px; font-weight:300; padding:2px 0px;}
+        .sub a:hover {background:rgba(255,0,0,0.5);}
+    </style>
+</head>
+<body>
+    <!-- div#nav>ul.main>li*4>a+ul.sub>li*4>a -->
+    <div id="nav">
+        <ul class="main">
+            <li>
+                <a href="#">축제소개</a>
+                <ul class="sub">
+                    <li><a href="#">초대의 글</a></li>
+                    <li><a href="#">축제개요</a></li>
+                    <li><a href="#">축제연혁</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">행사안내</a>
+                <ul class="sub">
+                    <li><a href="#">셔틀버스안내</a></li>
+                    <li><a href="#">행사안내</a></li>
+                    <li><a href="#">행사일정</a></li>
+                    <li><a href="#">소공연장</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">홍보마당</a>
+                <ul class="sub">
+                    <li><a href="#">축제소식</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">음식레시피</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">참여마당</a>
+                <ul class="sub">
+                    <li><a href="#">참가후기</a></li>
+                    <li><a href="#">연꽃갤러리</a></li>
+                    <li><a href="#">포토갤러리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

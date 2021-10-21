@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* reset */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: malgun;
+    src: url('font/malgun.ttf');
+}
+
+* {margin:0; padding:0; box-sizing:border-box;}
+ul {list-style:none;}
+img { vertical-align: top; } 
+a {text-decoration:none; color:#333;}
+button {border:none; background:transparent; cursor: pointer;}
+
+/* layout */
+#wrap { width: 1000px; } 
+#header { float: left; width: 200px; height:650px; background:#358b82;} 
+#container { float: left; width: 800px; } 
+#slide { height: 350px; } 
+#contents { height: 200px; } 
+#footer { height: 100px; background:#333; color:#fff;} 
+
+/* typo */
+body {font:14px/1.6 malgun, sans-serif;}
+.fs_lg {font-size:18px; font-family:NanumSquare, sans-serif; font-weight:700;}
+.fs_md {font-size:16px; font-family:NanumSquare, sans-serif; font-weight:700;}
+.fs_sm {font-size:13px; font-family:NanumSquare, sans-serif; font-weight:300; line-height:1.8;}
+.fs_xs {font-size:11px;}
+
+/* header */
+.logo {height: 40px; margin-top:20px;} 
+
+/* navigation */
+#nav {z-index:1; position:absolute; top:100px; left:25px;}
+
+/* 1depth: main */
+.main {
+    width:150px;
+    text-align:center;   
+}
+.main > li {
+    position:relative;
+    background:#333;
+}
+.main > li > a {
+    display:block; width:100%; padding:5px 0;
+    border-bottom:1px solid #ccc;
+}
+.main > li:hover .sub {display:block;}
+.main > li:hover > a {background:#ccc; color:#333;}
+.main > li > a {color:#fff;}
+
+/* 2depth: sub */
+.sub {
+    display:none;
+    position:absolute; left:150px; top:-30px;
+    width:130px; background:rgba(85, 85, 85,0.7);
+    padding:5px 0 80px;
+}
+.sub a {display:block; width:100%; color:#ccc; padding:2px 0px;}
+.sub a:hover {background:rgba(255,0,0,0.5);}
+
+/* slide */
+#slide {overflow:hidden;}
+#slide ul {position:relative; width:3200px; animation:slide 9s infinite;}
+#slide li {float:left;}
+
+@keyframes slide{
+    0% {left:0;}
+    5% {left:-800px;}
+    33% {left:-800px;}
+    38% {left:-1600px;}
+    66% {left:-1600px;}
+    71% {left:-2400px;}
+    99.9% {left:-2400px;}
+    99.99% {left:0px;}
+    100% {left:0px;}
+}
+
+/* popup */
+#popup {z-index:2; display:none; position:fixed; left:0; top:0; width:1000px; height:650px;}
+#popup .inbox {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:600px; background:#fff; padding:20px; border:10px solid #ccc; box-shadow:0 0 10px 5px #333;}
+#popup h2 {margin-bottom:20px;}
+#popup p {margin-bottom:20px;}
+#popup button {float:right; padding:10px 20px; border-radius:20px; background:#358b82; color:#fff;}
+
+/* contents */
+.notice { float: left; width: 310px; height: 200px; padding:15px 10px; margin-right:10px;}
+.notice h2 {border:1px solid #ccc; border-bottom:none; padding:5px 10px;} 
+.notice ul {list-style:disc inside; border:1px solid #ccc; border-top:none; padding:0 10px 10px;}
+.notice span {display:inline-block; width:190px;}
+.notice a:hover {text-decoration:underline;}
+
+.gallery { float: left; width: 280px; height: 200px; padding:15px 0px;} 
+.gallery h2 {padding:5px 0px;}
+
+.banner { float: right; width: 185px; height: 200px; padding:15px 0px 15px 0px;margin-left:15px;}
+.banner img {border-left:1px solid #ccc; padding-left:15px;} 
+
+/* footer */
+.logo2 { float: left; width: 200px; height: 100px; margin-top:15px;} 
+.bnb { float: left; margin:20px 0 0 15px;}
+.bnb a:nth-of-type(2) {color:#358b82;}
+.bnb a {color:#fff;} 
+.copyright { float: left; margin:10px 15px;} 
