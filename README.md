@@ -1,2 +1,0 @@
-# cwd
-Craftsman Web Design
